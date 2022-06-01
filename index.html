@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEONGJIN-PARK | Personal website</title>
+        <meta charset="utf-8">
+        <meta content="Seongjin Park | Personal Website" name="title">
+        <meta content="Seongjin Park" name="author">
+        <meta content="A personal website for Seongjin Park" name="description">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script>		
+            $(document).ready(function () {
+             $('li').hover(function () {$(this).css({background: 'yellow',color: 'white'});},
+                function () { $(this).css({background: '',color: ''});
+                });
+            $('#menu_item').on('change', function () {});
+                $('li:nth-child(1)').click(function(){
+                    $('#menu_home').css('display', 'block');
+                    $('#menu_aboutme').css('display', 'none');
+                    $('#menu_portfolio').css('display', 'none');
+                })
+                $('li:nth-child(2)').click(function(){
+                    $('#menu_home').css('display', 'none');
+                    $('#menu_aboutme').css('display', 'block');
+                    $('#menu_portfolio').css('display', 'none');
+                })
+                $('li:nth-child(3)').click(function(){
+                    $('#menu_home').css('display', 'none');
+                    $('#menu_aboutme').css('display', 'none');
+                    $('#menu_portfolio').css('display', 'block');
+                })
+            });
+        </script>
+        <style>
+            div.container {overflow: hidden;}
+            div.item {float: left;}
+            * { margin:0; padding: 0;}
+            body {width: 960px; margin: 0 auto; overflow-y: scroll; }
+            #menu { float: right; }
+            #section { width: 800px; float: left; }
+            #name {font-size: 32px; text-decoration: none; color: black; float: left;}
+            #menu_item {text-decoration: none; color: black;}
+            #menu_row{float: right;}
+            #image {width: 300px;height: 160px;border: 1px;border-radius: 5px; position: relative;}
+            #my_introduce {float: left; left: 300px; top: -150px; width: 100%;min-height: 1px;padding-right: 15px;padding-left: 15px; font-size: 15px; position: relative}
+            #menu_aboutme{float: left;}
+            #menu_home{float: auto;}
+            #menu_public{float: left;}
+            #aboutmetext{font-style: italic;}
+            #portfolioimg{float: left; width: 30%;}
+            #portfoliotext{font-size: larger; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             font-weight: 200; text-align: center;}
+            .footer {float: left; position: absolute;bottom: 0px;height: 60px;width: 65%;font-size: 14px;padding-top: 16px;
+                padding-bottom: 16px;background-color:#fcfcfc;border-top: 1px solid #e0e0e0; }
+            #container {width: 800px; height: 10px;position: absolute; left: 50%; top: 30%; margin-left: -500px; margin-top: -125px; }
+            @media screen and (max-width: 767px) {
+            body { width: auto}
+            div.container{overflow: none;}
+            #menu { width: auto; float: none;}
+            #section { width: auto; float: none; }
+            #name { width: auto; font-size: 20px; text-decoration: none; color: black; float: none;}
+            #menu_item {width: auto; font-size: 16px; text-decoration: none; color: black;}
+            #image {width: auto; float: none;height: auto; position: static;}
+            #my_introduce {width: auto; float: none; position: static; left: auto; top: auto;}
+            #menu_aboutme{width: auto; float: none;}
+            #menu_home{width: auto; float: none;}
+            #menu_public{width: auto; float: none;}
+            #aboutmetext{width: auto; float: inline-end;}
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <a class="item" id="name" href="">SEONGJIN-PARK</a>
+                <div id="menu">
+                    <ul>
+                        <li class="item"><a href="#home" id="menu_item">HOME</a></li>
+                        <li class="item"><a href="#aboutme" id="menu_item">ABOUTME</a></li>
+                        <li class="item"><a href="#portfolio" id="menu_item">PORTFOLIO</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div id="section">
+                    <br><br><br>
+                    <div id="menu_home">
+                        <div id="image">
+                            <img src="C:\Users\bless\Desktop\myself.jpg" width="100%">
+                            <span></span>
+                        </div>
+                        <div id="my_introduce">
+                            <h3>박성진(朴成珍)/21세</h3>
+                            <br>
+                            <p>강원대학교에 2021년 입학하여 현재 컴퓨터 공학과 2학년에 재학중입니다.</p>
+                            <p>IoT에 전반적인 부분에 관심과 흥미가 있지만</p>
+                            <p>특히 IoT 작동과 정보보안에 많은 관심을 가지고 학업에 전념중입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section">
+                    <div id="menu_aboutme" style="display:none;">
+                        <h1>나의 관한 10가지</h1>
+                        <hr>
+                        <br>
+                        <h3>내 이름과 가명을 쓴다면?</h3>
+                        <br>
+                        <p id="aboutmetext">내 이름은 이룰 성, 보배 진으로 값진 것을 이루라는 의미로 할아버지께서 지어주신 이름이다. <br>가명은 당근빠따 지상이~~~&gt;&lt;</p>
+                        <hr>
+                        <br>
+                        <h3>내 생일은?</h3>
+                        <br>
+                        <p id="aboutmetext">제 벌쓰!데이 이즈 6월 21일데쓰~ (종강 마지막날 = 내생일까지 시험있음. 보고계십니까 교수님?)</p>
+                        <hr>
+                        <br>
+                        <h3>내 키는?</h3>
+                        <br>
+                        <p id="aboutmetext">작년 병역판정검사 기준 175cm...키...더 크고 싶었는데...</p>
+                        <hr>
+                        <br>
+                        <h3>내 MBTI는?</h3>
+                        <br>
+                        <p id="aboutmetext">J가 되고싶은 ENFP랍니다~^^</p>
+                        <hr>
+                        <br>
+                        <h3>좋아하는 음식&싫어하는 음식</h3>
+                        <br>
+                        <p id="aboutmetext">특정 몇몇개를 제외하고는 다 잘먹는데 아 나 작년부터 텐동 먹고싶었어...<br><br>
+                            오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초
+                            오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초오이가지민초
+                        </p>
+                        <hr>
+                        <br>
+                        <h3>내 이상형은?</h3>
+                        <br>
+                        <p id="aboutmetext">에,,,,? 어 음.... 내가 너무 잼민이니까 유치하지 않았으면 좋겠다,,,?<br>
+                            근데 또 항상 그런 텐션은 아니구....그냥....대화나 잘통했으면 좋겠다?<br><br>
+                            사실 그냥 너가 좋을뿐이야 ㅎㅎ<br><br>
+                        </p>
+                        <hr>
+                        <br>
+                        <h3>내 장래희망</h3>
+                        <br>
+                        <p id="aboutmetext">먼 일을 하든 상관은 없는데..... 일주일이나 한달에 한번은 돈 걱정 안하고<br>
+                        먹고싶은거 먹을 수 있을 정도로 돈 벌고싶어</p>
+                        <hr>
+                        <br>
+                        <h3>나랑 친해지는 법</h3>
+                        <br>
+                        <p id="aboutmetext">술 아닙니다. 저 술 안좋아해요. 그냥 술자리가 좋고 사람 만나는게 좋을 뿐입니다^^<br>
+                        오히려 카페 가는걸 더 좋아해영 나랑 카페 자주가자</p>
+                        <hr>
+                        <br>
+                        <h3>내 스트레스 해소법</h3>
+                        <br>
+                        <p id="aboutmetext">노!래!방! 가는거 좋아하는데 요즘 목이 왜 이렇게 안좋은지~~<br>
+                        그리고 카페 가기랑~ 알지~? 그거그거~~~</p>
+                        <hr>
+                        <br>
+                        <h3>내 좌우명</h3>
+                        <br>
+                        <p id="aboutmetext" style="text-align: center;">"내일 할일을 오늘로 당기지 말자"</p>
+                        <br><br><br><br><br><br>
+                        <hr>
+                    </div>
+                </div>
+                <div id="section">
+                    <div id="menu_portfolio" style="display:none;">
+                        <h1>PORTFOLIO</h1>
+                        <hr>
+                        <br>
+                        <h2>AndroidStudio Study</h2>
+                        <br>
+                        <img src="C:\Users\bless\Desktop\androidstudio.jpg" id="portfolioimg">
+                        <p id="portfoliotext">대학교 1학년때 선배님과 함께 androidstudio를<br> 사용하여
+                            스터디를 진행.<br>
+                            실제 안드로이드 기반 스마트폰에서 구동 가능한 앱을 개발하고 UI를 디자인.
+                        </p>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <hr>
+                        <br>
+                        <h2>Java Study</h2>
+                        <br>
+                        <img src="C:\Users\bless\Desktop\javastudy.jpg" id="portfolioimg">
+                        <p id="portfoliotext">대학교 2학년 자바 코딩 동아리 안에서 Java를<br> 
+                            사용하여 프로그램을 작성.<br>
+                            char 타입의 변수형과 ASCII 코드에 관한 심화 과정을 배움.
+                        </p>
+                        <br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
